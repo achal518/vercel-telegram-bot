@@ -1,24 +1,24 @@
-import json
+from flask import Flask, request
 import os
 import requests
 
-def handler(request):
+app = Flask(__name__)
+
+@app.route('/', methods=['POST'])
+def handler():
     try:
-        # Vercel ke liye request object se body lena
         body = request.json
         message = body.get('message', {})
         chat_id = message.get('chat', {}).get('id')
         user_text = message.get('text', '')
 
-        # BOT_TOKEN ko environment variables se securely lena
         BOT_TOKEN = os.environ.get('BOT_TOKEN')
         TELEGRAM_URL = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
         if not chat_id or not user_text:
-            return "OK" # Telegram ko batana ki sab theek hai
+            return "OK", 200
 
-        # User ko wahi message wapas bhejna (Echo Bot)
-        response_text = f"Aapne bheja (Vercel se): {user_text}"
+        response_text = f"Aapne bheja (Flask se): {user_text}"
 
         payload = {
             'chat_id': chat_id,
@@ -27,8 +27,8 @@ def handler(request):
 
         requests.post(TELEGRAM_URL, json=payload)
 
-        return "OK" # Hamesha 200 OK response bhejna
+        return "OK", 200
 
     except Exception as e:
         print(f"Error: {e}")
-        return str(e) # Error bhejna
+        return "Error", 500
