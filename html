@@ -1,0 +1,1757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Social Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <!-- Top Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <button id="hamburgerMenu" class="hamburger-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <div class="logo-container">
+                        <div class="logo-icon">
+                            <i class="fas fa-chart-network"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="logo-main">India Social Panel</span>
+                            <span class="logo-sub">Premium Social Media Services</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <button id="darkModeToggle" class="dark-mode-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div id="balanceBtn" class="balance-display">₹0.0</div>
+                <div class="user-avatar" id="userAvatar">
+                    <span class="avatar-icon">A</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Side Navigation -->
+        <nav id="sideNav" class="side-nav">
+            <div class="nav-overlay" id="navOverlay"></div>
+            <div class="nav-content">
+                <div class="nav-header">
+                    <h3>Menu</h3>
+                    <button id="closeNav" class="close-nav">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#" id="newOrderNav"><i class="fas fa-plus-circle"></i> New Order</a></li>
+                    <li><a href="#" id="childPanelsNav"><i class="fas fa-users"></i> Child Panels</a></li>
+                    <li><a href="#" id="ordersNav"><i class="fas fa-shopping-cart"></i> Order History</a></li>
+                    <li><a href="#" id="refillHistoryNav"><i class="fas fa-history"></i> Refill History</a></li>
+                    <li><a href="#" id="servicesNav"><i class="fas fa-cogs"></i> Services</a></li>
+                    <li><a href="#" id="addFundsNav"><i class="fas fa-wallet"></i> Add Funds</a></li>
+                    <li><a href="#" id="ticketsNav"><i class="fas fa-ticket-alt"></i> Tickets <span class="badge">1</span></a></li>
+                    <li><a href="#" id="faqNav"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                    <li><a href="#" id="apiNav"><i class="fas fa-code"></i> API</a></li>
+                    <li><a href="#" id="referEarnNav"><i class="fas fa-gift"></i> Refer & Earn</a></li>
+                    <li><a href="#" id="tutorialVideoNav"><i class="fas fa-play-circle"></i> Tutorial Video</a></li>
+                    <li><a href="#" onclick="window.location.href='https://sbbsixrlogin.netlify.app/'"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Dashboard Home -->
+            <div id="dashboardHome" class="page active">
+                <!-- Important Update Section - Moved to Top -->
+                <div class="update-card">
+                    <div class="update-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Important Update 🚨</h3>
+                    </div>
+                    <p>Turn off "Flag for review" before ordering Instagram followers.</p>
+                    <p class="hindi-text">English: Turn off "Flag for review" option before ordering Instagram Followers.</p>
+
+                    <div class="update-image-container">
+                        <img src="https://i.postimg.cc/fRTj0wvc/864642395-Safe-Smm-Panel-Flag-Off.gif" alt="Flag for review settings" style="width:100%; max-width:500px; height:auto; border-radius:10px; margin:15px 0;"/>
+                    </div>
+
+                    <div class="must-read">
+                        <h4>📖 Must Read 📖</h4>
+                        <ul>
+                            <li>Read description before adding an order.</li>
+                            <li><strong>Do not place a second order on the same link before completion.</strong></li>
+                            <li><strong>Wrong or non-working link? No refund.</strong></li>
+                            <li>We work on start count + quantity = final quantity.</li>
+                            <li>Don't change username if you ordered a refill service.</li>
+                            <li>📚 Read <a href="#" id="userGuideLink">User Guide ➤ Click Here</a></li>
+                            <li>📱 <span id="whatsappGroupText">Check Other Services</span> ➤ <a href="http://t.me/Indiasocialpainel_official_bot?start=start" id="whatsappGroupLink">Click Here</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Total Orders Section - Moved above balance -->
+                <div class="stats-card">
+                    <div class="stats-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>TOTAL ORDERS AT INDIASOCIALPANEL</h3>
+                    <div class="stats-number">119168990</div>
+                    <p>3+ years experience providing SMM services!</p>
+                </div>
+
+                <!-- Balance Section - Moved below stats -->
+                <div class="balance-card">
+                    <div class="balance-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <p>Looking to Deposit?</p>
+                    <button class="deposit-btn" id="depositBtnMain">DEPOSIT NOW</button>
+                    <div class="balance-info">
+                        <h4>CURRENT BALANCE</h4>
+                        <div class="balance-amount">₹0.00</div>
+                        <p>Your total spendings : ₹0.00</p>
+                    </div>
+                </div>
+
+                <!-- Order Tabs -->
+                <div class="order-tabs">
+                    <button class="tab-btn active" id="newOrderTab">🛒 New Order</button>
+                    <button class="tab-btn" id="massOrderTab">📦 Mass Order</button>
+                </div>
+
+                <!-- Search Service -->
+                <div class="search-section">
+                    <label for="searchService">Search Service</label>
+                    <input type="text" id="searchService" placeholder="Search Service" class="search-input">
+                    <div id="searchOptions" class="dropdown-options">
+                        <!-- Search results will appear here -->
+                    </div>
+                </div>
+
+                <!-- Service Selection -->
+                <div class="service-section">
+                    <label for="serviceSelect">Service</label>
+                    <div class="custom-dropdown" id="serviceDropdown">
+                        <div class="dropdown-selected" id="serviceSelected">
+                            <span class="selected-text">Select Service</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options" id="serviceOptions">
+                            <div class="dropdown-option" data-value="instagram">
+                                <i class="fab fa-instagram service-icon instagram-icon"></i>
+                                <span>Instagram Services</span>
+                                <small>Followers, Likes, Views & More</small>
+                            </div>
+                            <div class="dropdown-option" data-value="facebook">
+                                <i class="fab fa-facebook-f service-icon facebook-icon"></i>
+                                <span>Facebook Services</span>
+                                <small>Page Likes, Followers & Views</small>
+                            </div>
+                            <div class="dropdown-option" data-value="youtube">
+                                <i class="fab fa-youtube service-icon youtube-icon"></i>
+                                <span>YouTube Services</span>
+                                <small>Subscribers, Views & Watch Time</small>
+                            </div>
+                            <div class="dropdown-option" data-value="whatsapp">
+                                <i class="fab fa-whatsapp service-icon whatsapp-icon"></i>
+                                <span>WhatsApp Services</span>
+                                <small>Blue Tick, Channel Members</small>
+                            </div>
+                            <div class="dropdown-option" data-value="twitter">
+                                <i class="fab fa-twitter service-icon twitter-icon"></i>
+                                <span>Twitter/X Services</span>
+                                <small>Followers, Likes, Retweets</small>
+                            </div>
+                            <div class="dropdown-option" data-value="tiktok">
+                                <i class="fab fa-tiktok service-icon tiktok-icon"></i>
+                                <span>TikTok Services</span>
+                                <small>Likes, Views, Followers</small>
+                            </div>
+                            <div class="dropdown-option" data-value="telegram">
+                                <i class="fab fa-telegram service-icon telegram-icon"></i>
+                                <span>Telegram Services</span>
+                                <small>Members, Views, Reactions</small>
+                            </div>
+                            <div class="dropdown-option" data-value="linkedin">
+                                <i class="fab fa-linkedin service-icon linkedin-icon"></i>
+                                <span>LinkedIn Services</span>
+                                <small>Connections, Page Likes</small>
+                            </div>
+                            <div class="dropdown-option" data-value="snapchat">
+                                <i class="fab fa-snapchat service-icon snapchat-icon"></i>
+                                <span>Snapchat Services</span>
+                                <small>Views, Followers</small>
+                            </div>
+                            <div class="dropdown-option" data-value="pinterest">
+                                <i class="fab fa-pinterest service-icon pinterest-icon"></i>
+                                <span>Pinterest Services</span>
+                                <small>Followers, Saves, Likes</small>
+                            </div>
+                            <div class="dropdown-option" data-value="reddit">
+                                <i class="fab fa-reddit service-icon reddit-icon"></i>
+                                <span>Reddit Services</span>
+                                <small>Upvotes, Followers</small>
+                            </div>
+                            <div class="dropdown-option" data-value="discord">
+                                <i class="fab fa-discord service-icon discord-icon"></i>
+                                <span>Discord Services</span>
+                                <small>Members, Online Users</small>
+                            </div>
+                            <div class="dropdown-option" data-value="spotify">
+                                <i class="fab fa-spotify service-icon spotify-icon"></i>
+                                <span>Spotify Services</span>
+                                <small>Plays, Followers, Likes</small>
+                            </div>
+                            <div class="dropdown-option" data-value="twitch">
+                                <i class="fab fa-twitch service-icon twitch-icon"></i>
+                                <span>Twitch Services</span>
+                                <small>Followers, Views, Likes</small>
+                            </div>
+                            <div class="dropdown-option" data-value="threads">
+                                <i class="fas fa-at service-icon threads-icon"></i>
+                                <span>Threads Services</span>
+                                <small>Followers, Likes, Reposts</small>
+                            </div>
+                            <div class="dropdown-option" data-value="website-traffic">
+                                <i class="fas fa-globe service-icon website-icon"></i>
+                                <span>Website Traffic</span>
+                                <small>Visitors, Page Views</small>
+                            </div>
+                            <div class="dropdown-option" data-value="google-reviews">
+                                <i class="fab fa-google service-icon google-icon"></i>
+                                <span>Google Reviews</span>
+                                <small>5 Star Reviews, Ratings</small>
+                            </div>
+                            <div class="dropdown-option" data-value="seo-services">
+                                <i class="fas fa-search service-icon seo-icon"></i>
+                                <span>SEO Services</span>
+                                <small>Backlinks, Keywords</small>
+                            </div>
+                            <div class="dropdown-option" data-value="new-offers">
+                                <i class="fas fa-fire service-icon offer-icon"></i>
+                                <span>🔥 New Service Offers</span>
+                                <small>Special Discounts & Deals</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hidden select for compatibility -->
+                    <select id="serviceSelect" class="service-select hidden">
+                        <option value="">Select Service</option>
+                    </select>
+                </div>
+
+                <!-- Package Selection -->
+                <div class="package-section">
+                    <label for="packageSelect">Package</label>
+                    <div class="custom-dropdown" id="packageDropdown">
+                        <div class="dropdown-selected" id="packageSelected">
+                            <span class="selected-text">Select Package</span>
+                            <i class="fas fa-chevron-down dropdown-arrow"></i>
+                        </div>
+                        <div class="dropdown-options" id="packageOptions">
+                            <!-- Packages will be populated dynamically -->
+                        </div>
+                    </div>
+                    <!-- Hidden select for compatibility -->
+                    <select id="packageSelect" class="package-select hidden">
+                        <option value="">Select Package</option>
+                    </select>
+                </div>
+
+                <!-- Price Display -->
+                <div id="priceSection" class="price-section hidden">
+                    <div class="price-box">
+                        <h4>Price</h4>
+                        <div id="priceDisplay" class="price-display">₹0.00</div>
+                    </div>
+
+                    <div class="description-box">
+                        <h4>Description</h4>
+                        <div class="warning-icon">⚠️ Please Read Before Ordering</div>
+                        <div id="descriptionContent" class="description-content">
+                            <p>Start: 0-15 Minutes</p>
+                            <p>Speed: 100K per Day | Can Be Slow Sometimes</p>
+                            <p>Quality: Old Accounts</p>
+                            <p>Drop Rate: Low Drop 💧(UPTO 10%)</p>
+                            <p>Refill Time: 365 Days Only If Drop below 10%⚡️</p>
+                            <p><strong>Notes:</strong></p>
+                            <p>Speed and start time may vary during high demand.</p>
+                            <p>Please do not place a second order on the same link before the first one is completed.</p>
+                        </div>
+                    </div>
+
+                    <!-- Link Input -->
+                    <div class="input-section">
+                        <label for="linkInput">Link (Must be Public)</label>
+                        <input type="url" id="linkInput" placeholder="https://instagram.com/username" class="link-input">
+                        <div id="linkValidationMessage" class="validation-message hidden"></div>
+                    </div>
+
+                    <!-- Quantity Input -->
+                    <div class="input-section">
+                        <label for="quantityInput">Quantity</label>
+                        <input type="number" id="quantityInput" placeholder="100" class="quantity-input" min="100" max="1000000">
+                        <div class="quantity-info">Min: 100 - Max: 1000000</div>
+                    </div>
+
+                    <!-- Coupon Code Input -->
+                    <div id="couponSection" class="input-section hidden">
+                        <label for="couponInput">Coupon Code (Optional)</label>
+                        <input type="text" id="couponInput" placeholder="Enter coupon code" class="coupon-input">
+                        <div id="couponValidationMessage" class="validation-message hidden"></div>
+                    </div>
+
+                    <!-- You will pay -->
+                    <div class="payment-section">
+                        <h4>You will pay</h4>
+                        <div id="totalAmount" class="total-amount">0.00</div>
+                        <div id="balanceError" class="balance-error hidden">
+                            😭 Houston we have problem! And its... Not enough funds on balance
+                        </div>
+                    </div>
+
+                    <!-- Terms Checkbox -->
+                    <div class="terms-section">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="termsCheckbox">
+                            <span class="checkmark"></span>
+                            Yes, I have confirmed the <a href="#" class="terms-link">Terms & Conditions</a>
+                        </label>
+                    </div>
+
+                    <!-- Place Order Button -->
+                    <button id="placeOrderBtn" class="place-order-btn">PLACE ORDER</button>
+
+                    <!-- Error Message -->
+                    <div id="errorMessage" class="error-message hidden">
+                        Please ensure all required fields are filled and terms & conditions are accepted to place your order.
+                    </div>
+                </div>
+
+                <!-- Latest News -->
+                <div class="news-section">
+                    <h3>📰 LATEST NEWS</h3>
+                    <div class="news-item">
+                        <div class="news-date" id="userFirstVisitDate">Loading...</div>
+                        <div class="news-content">
+                            <h4 id="congratulationsText">🎉 Congratulations 🎉</h4>
+                            <p id="membershipText">Now You are a <span class="member-text" id="memberText">Member</span> of India Social Panel.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order History Page -->
+            <div id="orderHistoryPage" class="page">
+                <div class="page-header">
+                    <h2>Order History</h2>
+                </div>
+                <div id="orderHistoryContent" class="orders-content">
+                    <div class="empty-state">
+                        <div class="empty-icon">🛒</div>
+                        <h3>You haven't placed any orders yet.</h3>
+                        <p>Start your journey to social media success by placing your first order now!</p>
+                        <button class="cta-btn" onclick="showPage('dashboardHome')">Place Your First Order</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Services Page -->
+            <div id="servicesPage" class="page">
+                <div class="page-header">
+                    <h2>All Services</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-category">
+                        <h3>📺 YouTube Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="youtube" data-search="youtube monetization">
+                                <span>YouTube Channel Monetization - Basic</span>
+                                <span class="service-price">₹15,000</span>
+                            </div>
+                            <div class="service-item" data-service="youtube" data-search="youtube monetization premium">
+                                <span>YouTube Channel Monetization - Premium</span>
+                                <span class="service-price">₹19,000</span>
+                            </div>
+                            <div class="service-item" data-service="youtube" data-search="youtube subscribers">
+                                <span>YouTube Subscribers</span>
+                                <span class="service-price">₹350-520/k</span>
+                            </div>
+                            <div class="service-item" data-service="youtube" data-search="youtube views">
+                                <span>YouTube Views</span>
+                                <span class="service-price">₹200-350/k</span>
+                            </div>
+                            <div class="service-item" data-service="youtube" data-search="youtube shorts views">
+                                <span>YouTube Shorts Views</span>
+                                <span class="service-price">₹150-280/k</span>
+                            </div>
+                            <div class="service-item" data-service="youtube" data-search="youtube likes">
+                                <span>YouTube Likes</span>
+                                <span class="service-price">₹140-220/k</span>
+                            </div>
+                            <div class="service-item" data-service="youtube" data-search="youtube watch time">
+                                <span>YouTube Watch Time</span>
+                                <span class="service-price">₹5,500-6,500/k hours</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>📸 Instagram Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="instagram" data-search="instagram followers">
+                                <span>Instagram Followers</span>
+                                <span class="service-price">₹150-280/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram likes">
+                                <span>Instagram Likes</span>
+                                <span class="service-price">₹15-35/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram views">
+                                <span>Instagram Views</span>
+                                <span class="service-price">₹18-40/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram story views">
+                                <span>Instagram Story Views</span>
+                                <span class="service-price">₹15-30/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram reels likes">
+                                <span>Instagram Reels Likes</span>
+                                <span class="service-price">₹20-40/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram reels views">
+                                <span>Instagram Reels Views</span>
+                                <span class="service-price">₹22-45/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram comments">
+                                <span>Instagram Comments</span>
+                                <span class="service-price">₹450-600/k</span>
+                            </div>
+                            <div class="service-item" data-service="instagram" data-search="instagram saves">
+                                <span>Instagram Saves</span>
+                                <span class="service-price">₹80-120/k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>📘 Facebook Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="facebook" data-search="facebook monetization">
+                                <span>Facebook Monetization</span>
+                                <span class="service-price">₹4,500-5,500</span>
+                            </div>
+                            <div class="service-item" data-service="facebook" data-search="facebook page likes">
+                                <span>Facebook Page Likes</span>
+                                <span class="service-price">₹160-260/k</span>
+                            </div>
+                            <div class="service-item" data-service="facebook" data-search="facebook followers">
+                                <span>Facebook Followers</span>
+                                <span class="service-price">₹170-270/k</span>
+                            </div>
+                            <div class="service-item" data-service="facebook" data-search="facebook post likes">
+                                <span>Facebook Post Likes</span>
+                                <span class="service-price">₹80-135/k</span>
+                            </div>
+                            <div class="service-item" data-service="facebook" data-search="facebook video views">
+                                <span>Facebook Video Views</span>
+                                <span class="service-price">₹12-22/k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>💬 WhatsApp Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="whatsapp" data-search="whatsapp blue tick">
+                                <span>WhatsApp Blue Tick Verification</span>
+                                <span class="service-price">₹40,000</span>
+                            </div>
+                            <div class="service-item" data-service="whatsapp" data-search="whatsapp channel members">
+                                <span>WhatsApp Channel Members</span>
+                                <span class="service-price">₹300/k</span>
+                            </div>
+                            <div class="service-item" data-service="whatsapp" data-search="whatsapp poll votes">
+                                <span>WhatsApp Poll Votes</span>
+                                <span class="service-price">₹500/k</span>
+                            </div>
+                            <div class="service-item" data-service="whatsapp" data-search="whatsapp status views">
+                                <span>WhatsApp Status Views</span>
+                                <span class="service-price">₹200/k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🐦 Twitter/X Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="twitter" data-search="twitter followers">
+                                <span>Twitter Followers</span>
+                                <span class="service-price">₹250/k</span>
+                            </div>
+                            <div class="service-item" data-service="twitter" data-search="twitter likes">
+                                <span>Twitter Likes</span>
+                                <span class="service-price">₹50/k</span>
+                            </div>
+                            <div class="service-item" data-service="twitter" data-search="twitter retweets">
+                                <span>Twitter Retweets</span>
+                                <span class="service-price">₹150/k</span>
+                            </div>
+                            <div class="service-item" data-service="twitter" data-search="twitter views">
+                                <span>Twitter Views</span>
+                                <span class="service-price">₹30/k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🎵 TikTok Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="tiktok" data-search="tiktok followers">
+                                <span>TikTok Followers</span>
+                                <span class="service-price">₹300/k</span>
+                            </div>
+                            <div class="service-item" data-service="tiktok" data-search="tiktok likes">
+                                <span>TikTok Likes</span>
+                                <span class="service-price">₹40/k</span>
+                            </div>
+                            <div class="service-item" data-service="tiktok" data-search="tiktok views">
+                                <span>TikTok Views</span>
+                                <span class="service-price">₹35/k</span>
+                            </div>
+                            <div class="service-item" data-service="tiktok" data-search="tiktok shares">
+                                <span>TikTok Shares</span>
+                                <span class="service-price">₹200/k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>💬 Telegram Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="telegram" data-search="telegram channel members">
+                                <span>Telegram Channel Members</span>
+                                <span class="service-price">₹150/k</span>
+                            </div>
+                            <div class="service-item" data-service="telegram" data-search="telegram group members">
+                                <span>Telegram Group Members</span>
+                                <span class="service-price">₹200/k</span>
+                            </div>
+                            <div class="service-item" data-service="telegram" data-search="telegram post views">
+                                <span>Telegram Post Views</span>
+                                <span class="service-price">₹25/k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category">
+                        <h3>🌐 Other Services</h3>
+                        <div class="service-list">
+                            <div class="service-item" data-service="linkedin" data-search="linkedin connections">
+                                <span>LinkedIn Connections</span>
+                                <span class="service-price">₹400/k</span>
+                            </div>
+                            <div class="service-item" data-service="snapchat" data-search="snapchat followers">
+                                <span>Snapchat Followers</span>
+                                <span class="service-price">₹400/k</span>
+                            </div>
+                            <div class="service-item" data-service="spotify" data-search="spotify plays">
+                                <span>Spotify Plays</span>
+                                <span class="service-price">₹100/k</span>
+                            </div>
+                            <div class="service-item" data-service="website-traffic" data-search="website traffic">
+                                <span>Website Traffic</span>
+                                <span class="service-price">₹300-1500/k</span>
+                            </div>
+                            <div class="service-item" data-service="google-reviews" data-search="google reviews">
+                                <span>Google 5 Star Reviews</span>
+                                <span class="service-price">₹1000/review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deposit Page -->
+            <div id="depositPage" class="page">
+                <div class="page-header">
+                    <h2>Deposit Funds</h2>
+                </div>
+                <div class="empty-state">
+                    <div class="empty-icon">💳</div>
+                    <p>Deposit functionality coming soon...</p>
+                </div>
+            </div>
+
+            <!-- User Guide Page -->
+            <div id="userGuidePage" class="page">
+                <div class="page-header">
+                    <h2>User Guidelines</h2>
+                </div>
+                <div class="guide-content">
+                    <p>Please follow the guidelines properly.</p>
+                </div>
+            </div>
+
+            <!-- Child Panels Page -->
+            <div id="childPanelsPage" class="page">
+                <div class="page-header">
+                    <h2>Child Panels</h2>
+                </div>
+                <div class="child-panels-content">
+                    <div class="panel-card">
+                        <h3>Create Child Panel</h3>
+                        <p>Create sub-accounts for your team members</p>
+                        <button class="create-panel-btn">Create New Panel</button>
+                    </div>
+                    <div class="existing-panels">
+                        <h4>Your Child Panels</h4>
+                        <div class="empty-state">
+                            <div class="empty-icon">👥</div>
+                            <p>No child panels created yet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Page -->
+            <div id="ordersPage" class="page">
+                <div class="page-header">
+                    <h2>Order History</h2>
+                </div>
+                <div class="orders-content">
+                    <div class="order-filters">
+                        <select class="filter-select">
+                            <option>All Orders</option>
+                            <option>Completed</option>
+                            <option>Processing</option>
+                            <option>Cancelled</option>
+                        </select>
+                    </div>
+                    <div class="orders-list" id="enhancedOrdersList">
+                        <div class="enhanced-order-item">
+                            <div class="order-header">
+                                <div class="order-id-section">
+                                    <span class="order-id">#12345</span>
+                                    <button class="copy-btn" onclick="copyOrderId('12345')" title="Copy Order ID">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="order-status-badge processing">Processing</div>
+                            </div>
+                            <div class="order-details">
+                                <div class="order-service">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram Followers</span>
+                                </div>
+                                <div class="order-meta">
+                                    <span class="order-date">2025-08-01 12:30</span>
+                                    <span class="order-quantity">1000 followers</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-amount" data-price="200">₹200.00</div>
+                                <div class="order-actions">
+                                    <button class="action-btn view-btn" onclick="viewOrderDetails('12345')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="enhanced-order-item">
+                            <div class="order-header">
+                                <div class="order-id-section">
+                                    <span class="order-id">#12344</span>
+                                    <button class="copy-btn" onclick="copyOrderId('12344')" title="Copy Order ID">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="order-status-badge completed">Completed</div>
+                            </div>
+                            <div class="order-details">
+                                <div class="order-service">
+                                    <i class="fab fa-youtube"></i>
+                                    <span>YouTube Views</span>
+                                </div>
+                                <div class="order-meta">
+                                    <span class="order-date">2025-07-30 14:15</span>
+                                    <span class="order-quantity">5000 views</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-amount" data-price="150">₹150.00</div>
+                                <div class="order-actions">
+                                    <button class="action-btn view-btn" onclick="viewOrderDetails('12344')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="enhanced-order-item">
+                            <div class="order-header">
+                                <div class="order-id-section">
+                                    <span class="order-id">#12343</span>
+                                    <button class="copy-btn" onclick="copyOrderId('12343')" title="Copy Order ID">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                                <div class="order-status-badge completed">Completed</div>
+                            </div>
+                            <div class="order-details">
+                                <div class="order-service">
+                                    <i class="fab fa-facebook"></i>
+                                    <span>Facebook Page Likes</span>
+                                </div>
+                                <div class="order-meta">
+                                    <span class="order-date">2025-07-28 09:45</span>
+                                    <span class="order-quantity">2500 likes</span>
+                                </div>
+                            </div>
+                            <div class="order-footer">
+                                <div class="order-amount" data-price="300">₹300.00</div>
+                                <div class="order-actions">
+                                    <button class="action-btn view-btn" onclick="viewOrderDetails('12343')">
+                                        <i class="fas fa-eye"></i> View
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Refill History Page -->
+            <div id="refillHistoryPage" class="page">
+                <div class="page-header">
+                    <h2>Refill History</h2>
+                </div>
+                <div class="refill-content">
+                    <div class="refill-stats">
+                        <div class="stat-box">
+                            <h4>Total Refills</h4>
+                            <div class="stat-number">25</div>
+                        </div>
+                        <div class="stat-box">
+                            <h4>Success Rate</h4>
+                            <div class="stat-number">98%</div>
+                        </div>
+                    </div>
+                    <div class="refill-list">
+                        <div class="refill-item">
+                            <div class="refill-order">#12340</div>
+                            <div class="refill-service">Instagram Followers</div>
+                            <div class="refill-date">2025-01-20</div>
+                            <div class="refill-status success">Success</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add Funds Page -->
+            <div id="addFundsPage" class="page">
+                <div class="page-header">
+                    <h2>Add Funds</h2>
+                    <p>Deposit money to start ordering services</p>
+                </div>
+
+                <!-- Current Balance Card -->
+                <div class="balance-card">
+                    <div class="balance-icon">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="balance-info">
+                        <h4>CURRENT BALANCE</h4>
+                        <div class="balance-amount">₹0.00</div>
+                        <p>Your wallet balance</p>
+                    </div>
+                </div>
+
+                <!-- Amount Input Section -->
+                <div class="amount-section">
+                    <div>
+                        <h3>Enter Amount to Add</h3>
+                        <input 
+                            type="number" 
+                            id="addFundsAmountInput"
+                            placeholder="Enter amount (Min: ₹100)" 
+                            class="amount-input"
+                            min="100"
+                            max="100000"
+                            oninput="validateAddFundsAmount()"
+                        >
+                        <div class="amount-note">Minimum: ₹100| Maximum: ₹100,000</div>
+
+                        <!-- Quick Amount Buttons -->
+                        <div class="quick-amounts">
+                            <h4>💡 Quick Select</h4>
+                            <div class="quick-amount-carousel-container">
+                                <div class="quick-amount-carousel" id="quickAmountCarousel">
+                                    <button class="quick-amount-btn" onclick="setQuickAmount(500)">₹500</button>
+                                    <button class="quick-amount-btn" onclick="setQuickAmount(1000)">₹1000</button>
+                                    <button class="quick-amount-btn" onclick="setQuickAmount(2000)">₹2000</button>
+                                    <button class="quick-amount-btn" onclick="setQuickAmount(3000)">₹3000</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="payment-methods">
+                            <h4>Payment Methods</h4>
+
+                            <!-- Enhanced UPI Method Card -->
+                            <div class="method-card upi-card enhanced-upi" onclick="showUPIOptions()">
+                                <i class="fas fa-mobile-alt"></i>
+                                <div>
+                                    <h4>UPI Payment</h4>
+                                    <p>Choose your preferred UPI app</p>
+                                </div>
+                                <span class="instant-badge">⚡ Instant</span>
+                            </div>
+
+                            <!-- UPI Apps Grid (Initially Hidden) -->
+                            <div id="upiAppsGrid" class="upi-apps-grid" style="display: none;">
+                                <h4>Select UPI App</h4>
+                                <div class="upi-apps-container">
+                                    <button class="upi-app-btn" onclick="openUPIApp('gpay')" data-app="gpay">
+                                        <div class="upi-app-icon gpay-icon">
+                                            <i class="fab fa-google-pay"></i>
+                                        </div>
+                                        <span>Google Pay</span>
+                                    </button>
+
+                                    <button class="upi-app-btn" onclick="openUPIApp('phonepe')" data-app="phonepe">
+                                        <div class="upi-app-icon phonepe-icon">
+                                            <i class="fas fa-mobile-alt"></i>
+                                        </div>
+                                        <span>PhonePe</span>
+                                    </button>
+
+                                    <button class="upi-app-btn" onclick="openUPIApp('paytm')" data-app="paytm">
+                                        <div class="upi-app-icon paytm-icon">
+                                            <i class="fas fa-wallet"></i>
+                                        </div>
+                                        <span>Paytm</span>
+                                    </button>
+
+                                    <button class="upi-app-btn" onclick="openUPIApp('bhim')" data-app="bhim">
+                                        <div class="upi-app-icon bhim-icon">
+                                            <i class="fas fa-university"></i>
+                                        </div>
+                                        <span>BHIM</span>
+                                    </button>
+
+                                    <button class="upi-app-btn" onclick="openUPIApp('amazonpay')" data-app="amazonpay">
+                                        <div class="upi-app-icon amazon-icon">
+                                            <i class="fab fa-amazon-pay"></i>
+                                        </div>
+                                        <span>Amazon Pay</span>
+                                    </button>
+
+                                    <button class="upi-app-btn" onclick="openUPIApp('whatsapp')" data-app="whatsapp">
+                                        <div class="upi-app-icon whatsapp-icon">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </div>
+                                        <span>WhatsApp Pay</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Other Payment Methods -->
+                            <div class="method-card card-card" onclick="showComingSoon('Card Payment')">
+                                <i class="fas fa-credit-card"></i>
+                                <div>
+                                    <h4>Credit/Debit Card</h4>
+                                    <p>Pay with your credit or debit card</p>
+                                </div>
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+
+                            <div class="method-card bank-card" onclick="showComingSoon('Bank Transfer')">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Bank Transfer</h4>
+                                    <p>Direct bank account transfer</p>
+                                </div>
+                                <span class="coming-soon-badge">Coming Soon</span>
+                            </div>
+                        </div>
+
+                        <!-- Add Funds Button -->
+                        <button 
+                            id="dynamicAddFundsBtn"
+                            onclick="showAddFundsPaymentOptions()"
+                            class="add-funds-btn"
+                            disabled
+                        >
+                            <i class="fas fa-plus-circle"></i>
+                            Add Funds
+                        </button>
+
+                        <!-- Google Pay UPI Button -->
+                        <button 
+                            id="googlePayUPIBtn"
+                            onclick="openUPIAppGeneral()"
+                            class="add-funds-btn"
+                            style="background: linear-gradient(135deg, #4285f4 0%, #3367d6 100%); margin-top: 10px;"
+                            disabled
+                        >
+                            <i class="fab fa-google-pay"></i>
+                            Pay with UPI Apps
+                        </button>
+
+                        <div class="security-info">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure payment with SSL encryption</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tickets Page -->
+            <div id="ticketsPage" class="page">
+                <div class="page-header">
+                    <h2>Support Tickets</h2>
+                </div>
+                <div class="tickets-content">
+                    <button class="create-ticket-btn">Create New Ticket</button>
+                    <div class="tickets-list">
+                        <div class="ticket-item">
+                            <div class="ticket-id">#T001</div>
+                            <div class="ticket-subject">Order not delivered</div>
+                            <div class="ticket-status open">Open</div>
+                            <div class="ticket-date">2025-01-22</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Page -->
+            <div id="faqPage" class="page">
+                <div class="page-header">
+                    <h2>Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-content">
+                    <div class="faq-item">
+                        <div class="faq-question">How long does delivery take?</div>
+                        <div class="faq-answer">Most orders start within 0-15 minutes and complete within 24 hours.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">What payment methods do you accept?</div>
+                        <div class="faq-answer">We accept UPI, Credit/Debit cards, and Bank transfers.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">Do you provide refills?</div>
+                        <div class="faq-answer">Yes, we provide 365-day refill guarantee on eligible services.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Page -->
+            <div id="apiPage" class="page">
+                <div class="page-header">
+                    <h2>🔧 API Documentation</h2>
+                    <p>Integrate India Social Panel services into your applications</p>
+                </div>
+                <div class="api-content">
+                    <!-- API Key Management -->
+                    <div class="api-key-section">
+                        <div class="section-header">
+                            <h3><i class="fas fa-key"></i> API Key Management</h3>
+                            <p>Use your API key to integrate our services into your applications.</p>
+                        </div>
+                        <div class="api-key-card">
+                            <label>Your Current API Key</label>
+                            <div class="api-key-display">
+                                <input type="text" value="isp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6" readonly class="api-key-input">
+                                <button class="copy-btn">
+                                    <i class="fas fa-copy"></i> Copy
+                                </button>
+                            </div>
+                            <div class="api-actions">
+                                <button class="generate-api-btn">
+                                    <i class="fas fa-sync"></i> Generate New Key
+                                </button>
+                                <button class="test-api-btn">
+                                    <i class="fas fa-vial"></i> Test API
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- API Stats -->
+                    <div class="api-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Total Requests</h4>
+                                <span class="stat-number">1,247</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Success Rate</h4>
+                                <span class="stat-number">99.8%</span>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="stat-info">
+                                <h4>Avg Response</h4>
+                                <span class="stat-number">245ms</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Base URL -->
+                    <div class="api-base-url">
+                        <h3><i class="fas fa-link"></i> Base URL</h3>
+                        <div class="url-display">
+                            <code>https://api.indiasocialpanel.in/v1</code>
+                            <button class="copy-btn">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Authentication -->
+                    <div class="api-authentication">
+                        <h3><i class="fas fa-shield-alt"></i> Authentication</h3>
+                        <p>All API requests require your API key in the header:</p>
+                        <div class="code-example">
+                            <pre><code>Authorization: Bearer YOUR_API_KEY</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Available Endpoints -->
+                    <div class="api-endpoints">
+                        <h3><i class="fas fa-code"></i> Available Endpoints</h3>
+
+                        <div class="endpoint-item">
+                            <div class="endpoint-header">
+                                <span class="method get">GET</span>
+                                <code>/api/services</code>
+                                <span class="endpoint-desc">Get list of all available services</span>
+                            </div>
+                            <div class="endpoint-details">
+                                <h5>Response Example:</h5>
+                                <div class="code-example">
+                                    <pre><code>{
+  "status": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "Instagram Followers",
+      "category": "instagram",
+      "price": 200,
+      "min": 100,
+      "max": 100000
+    }
+  ]
+}</code></pre>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="endpoint-item">
+                            <div class="endpoint-header">
+                                <span class="method post">POST</span>
+                                <code>/api/order</code>
+                                <span class="endpoint-desc">Place a new order</span>
+                            </div>
+                            <div class="endpoint-details">
+                                <h5>Request Body:</h5>
+                                <div class="code-example">
+                                    <pre><code>{
+  "service": 1,
+  "link": "https://instagram.com/username",
+  "quantity": 1000
+}</code></pre>
+                                </div>
+                                <h5>Response Example:</h5>
+                                <div class="code-example">
+                                    <pre><code>{
+  "status": "success",
+  "order_id": 12345,
+  "message": "Order placed successfully"
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="endpoint-item">
+                            <div class="endpoint-header">
+                                <span class="method get">GET</span>
+                                <code>/api/status/{order_id}</code>
+                                <span class="endpoint-desc">Check order status</span>
+                            </div>
+                            <div class="endpoint-details">
+                                <h5>Response Example:</h5>
+                                <div class="code-example">
+                                    <pre><code>{
+  "status": "success",
+  "order": {
+    "id": 12345,
+    "status": "Completed",
+    "start_count": 1000,
+    "remains": 0
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="endpoint-item">
+                            <div class="endpoint-header">
+                                <span class="method get">GET</span>
+                                <code>/api/balance</code>
+                                <span class="endpoint-desc">Check account balance</span>
+                            </div>
+                            <div class="endpoint-details">
+                                <h5>Response Example:</h5>
+                                <div class="code-example">
+                                    <pre><code>{
+  "status": "success",
+  "balance": 1500.50,
+  "currency": "INR"
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Code Examples -->
+                    <div class="code-examples-section">
+                        <h3><i class="fas fa-code"></i> Code Examples</h3>
+
+                        <div class="example-tabs">
+                            <button class="example-tab active" data-lang="javascript">JavaScript</button>
+                            <button class="example-tab" data-lang="php">PHP</button>
+                            <button class="example-tab" data-lang="python">Python</button>
+                            <button class="example-tab" data-lang="curl">cURL</button>
+                        </div>
+
+                        <div class="example-content active" data-lang="javascript">
+                            <div class="code-example">
+                                <pre><code>// Place an order using JavaScript
+const response = await fetch('https://api.indiasocialpanel.in/v1/api/order', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer YOUR_API_KEY',
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    service: 1,
+    link: 'https://instagram.com/username',
+    quantity: 1000
+  })
+});
+
+const data = await response.json();
+console.log(data);</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="example-content" data-lang="php">
+                            <div class="code-example">
+                                <pre><code>&lt;?php
+// Place an order using PHP
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL =&gt; 'https://api.indiasocialpanel.in/v1/api/order',
+  CURLOPT_RETURNTRANSFER =&gt; true,
+  CURLOPT_POST =&gt; true,
+  CURLOPT_POSTFIELDS =&gt; json_encode(array(
+    'service' =&gt; 1,
+    'link' =&gt; 'https://instagram.com/username',
+    'quantity' =&gt; 1000
+  )),
+  CURLOPT_HTTPHEADER =&gt; array(
+    'Authorization: Bearer YOUR_API_KEY',
+    'Content-Type: application/json'
+  ),
+));
+
+$response = curl_exec($curl);
+curl_close($curl);
+
+echo $response;
+?&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="example-content" data-lang="python">
+                            <div class="code-example">
+                                <pre><code>import requests
+import json
+
+# Place an order using Python
+url = "https://api.indiasocialpanel.in/v1/api/order"
+headers = {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Content-Type": "application/json"
+}
+data = {
+    "service": 1,
+    "link": "https://instagram.com/username",
+    "quantity": 1000
+}
+
+response = requests.post(url, headers=headers, json=data)
+print(response.json())</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="example-content" data-lang="curl">
+                            <div class="code-example">
+                                <pre><code>curl -X POST \
+  'https://api.indiasocialpanel.in/v1/api/order' \
+  -H 'Authorization: Bearer YOUR_API_KEY' \
+  -H 'Content-Type': 'application/json' \
+  -d '{
+    "service": 1,
+    "link": "https://instagram.com/username",
+    "quantity": 1000
+  }'</code></pre>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Rate Limits -->
+                    <div class="rate-limits">
+                        <h3><i class="fas fa-tachometer-alt"></i> Rate Limits</h3>
+                        <div class="limits-grid">
+                            <div class="limit-item">
+                                <h4>Free Plan</h4>
+                                <p>100 requests/hour</p>
+                            </div>
+                            <div class="limit-item">
+                                <h4>Premium Plan</h4>
+                                <p>1000 requests/hour</p>
+                            </div>
+                            <div class="limit-item">
+                                <h4>Enterprise</h4>
+                                <p>Unlimited requests</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="api-support">
+                        <h3><i class="fas fa-life-ring"></i> Need Help?</h3>
+                        <p>Have questions about the API? Contact our support team:</p>
+                        <div class="support-buttons">
+                            <button onclick="openTelegramSupport()" class="support-btn telegram">
+                                <i class="fab fa-telegram"></i> Telegram Support
+                            </button>
+                            <button class="support-btn email">
+                                <i class="fas fa-envelope"></i> Email Support
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Refer & Earn Page -->
+            <div id="referEarnPage" class="page">
+                <div class="page-header">
+                    <h2>Refer & Earn</h2>
+                </div>
+                <div class="refer-content">
+                    <div class="refer-stats">
+                        <div class="stat-box">
+                            <h4>Total Referrals</h4>
+                            <div class="stat-number">5</div>
+                        </div>
+                        <div class="stat-box">
+                            <h4>Earnings</h4>
+                            <div class="stat-number">₹500</div>
+                        </div>
+                    </div>
+                    <div class="refer-link-section">
+                        <label>Your Referral Link</label>
+                        <div class="refer-link-display">
+                            <input type="text" value="https://indiasocialpanel.in/ref/ABC123" readonly class="refer-input">
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                    </div>
+                    <div class="refer-benefits">
+                        <h4>Benefits</h4>
+                        <ul>
+                            <li>Earn 10% commission on every order</li>
+                            <li>Instant payouts</li>
+                            <li>No limit on earnings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tutorial Video Page -->
+            <div id="tutorialVideoPage" class="page">
+                <div class="page-header">
+                    <h2>Tutorial Videos</h2>
+                </div>
+                <div class="tutorial-content">
+                    <div class="video-grid">
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <h4>How to Place Your First Order</h4>
+                            <p>Learn how to place orders step by step</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <h4>Understanding Services</h4>
+                            <p>Complete guide to our services</p>
+                        </div>
+                        <div class="video-card">
+                            <div class="video-thumbnail">
+                                <i class="fas fa-play-circle"></i>
+                            </div>
+                            <h4>Payment Methods</h4>
+                            <p>How to add funds to your account</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Profile Page -->
+            <div id="userProfilePage" class="page">
+                <div class="page-header">
+                    <h2>My Profile</h2>
+                </div>
+                <div class="user-profile-content">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-avatar-large">
+                            <span>A</span>
+                        </div>
+                        <div class="profile-info">
+                            <h2 id="profileDisplayName">Enter Your Name</h2>
+                            <p>Member since January 2025</p>
+                            <button class="profile-edit-btn">
+                                <i class="fas fa-edit"></i> Edit Profile
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Profile Stats -->
+                    <div class="profile-stats">
+                        <h3><i class="fas fa-chart-bar"></i> Account Statistics</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-value">0</div>
+                                <div class="stat-label">Total Orders</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">₹0</div>
+                                <div class="stat-label">Total Spent</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">₹0</div>
+                                <div class="stat-label">Current Balance</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">100%</div>
+                                <div class="stat-label">Success Rate</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Sections -->
+                    <div class="profile-sections">
+                        <!-- Personal Information -->
+                        <div class="profile-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            <div class="profile-field">
+                                <label>Full Name</label>
+                                <input type="text" class="profile-input" value="" placeholder="Enter your full name">
+                            </div>
+                            <div class="profile-field">
+                                <label>Email Address</label>
+                                <input type="email" class="profile-input" value="•••••••••@••••••.com" placeholder="Enter your email" readonly>
+                                <span class="verification-badge">
+                                    <i class="fas fa-check-circle"></i> Verified
+                                </span>
+                            </div>
+                            <div class="profile-field">
+                                <label>Mobile Number</label>
+                                <input type="tel" class="profile-input" value="" placeholder="Enter your mobile number">
+                            </div>
+                            <div class="profile-field">
+                                <label>Date of Birth</label>
+                                <input type="date" class="profile-input" value="">
+                            </div>
+                            <button class="save-btn">
+                                <i class="fas fa-save"></i> Save Changes
+                            </button>
+                        </div>
+
+                        <!-- Account Security -->
+                        <div class="profile-section">
+                            <h3><i class="fas fa-shield-alt"></i> Account Security</h3>
+                            <div class="profile-field">
+                                <label>Current Password</label>
+                                <input type="password" class="profile-input" placeholder="Enter current password">
+                            </div>
+                            <div class="profile-field">
+                                <label>New Password</label>
+                                <input type="password" class="profile-input" placeholder="Enter new password">
+                            </div>
+                            <div class="profile-field">
+                                <label>Confirm New Password</label>
+                                <input type="password" class="profile-input" placeholder="Confirm new password">
+                            </div>
+                            <div class="profile-field" id="twoFactorSection">
+                                <label>Two-Factor Authentication</label>
+                                <span class="unverified-badge" id="tfaStatus">
+                                    <i class="fas fa-exclamation-triangle"></i> Not Enabled
+                                </span>
+                                <button class="profile-edit-btn" id="enable2FABtn" onclick="open2FAModal()" style="margin-left: 10px;">
+                                    <i class="fas fa-mobile-alt"></i> Enable 2FA
+                                </button>
+                            </div>
+                            <button class="save-btn">
+                                <i class="fas fa-key"></i> Update Password
+                            </button>
+                        </div>
+
+                        <!-- Payment Methods -->
+                        <div class="profile-section">
+                            <h3><i class="fas fa-credit-card"></i> Payment Methods</h3>
+
+                            <!-- Add New Payment Method -->
+                            <div id="paymentMethodsList">
+                                <!-- User added payment methods will appear here -->
+                            </div>
+
+                            <button class="add-payment-btn" id="addPaymentMethodBtn">
+                                <i class="fas fa-plus"></i> Add New Payment Method
+                            </button>
+                        </div>
+
+                        <!-- Preferences -->
+                        <div class="profile-section">
+                            <h3><i class="fas fa-cog"></i> Preferences</h3>
+                            <div class="profile-field">
+                                <label>Language</label>
+                                <select class="profile-input" id="profileLanguageSelect" onchange="updateLanguage(this.value)">
+                                <option value="english" data-flag="🇺🇸">🇺🇸 English</option>
+                                <option value="hindi" data-flag="🇮🇳">🇮🇳 हिंदी (Hindi)</option>
+                                <option value="spanish" data-flag="🇪🇸">🇪🇸 Español</option>
+                                <option value="french" data-flag="🇫🇷">🇫🇷 Français</option>
+                                <option value="german" data-flag="🇩🇪">🇩🇪 Deutsch</option>
+                                <option value="italian" data-flag="🇮🇹">🇮🇹 Italiano</option>
+                                <option value="portuguese" data-flag="🇧🇷">🇧🇷 Português</option>
+                                <option value="russian" data-flag="🇷🇺">🇷🇺 Русский</option>
+                                <option value="chinese" data-flag="🇨🇳">🇨🇳 中文</option>
+                                <option value="japanese" data-flag="🇯🇵">🇯🇵 日本語</option>
+                                <option value="korean" data-flag="🇰🇷">🇰🇷 한국어</option>
+                                <option value="arabic" data-flag="🇸🇦">🇸🇦 العربية</option>
+                                <option value="dutch" data-flag="🇳🇱">🇳🇱 Nederlands</option>
+                                <option value="polish" data-flag="🇵🇱">🇵🇱 Polski</option>
+                                <option value="turkish" data-flag="🇹🇷">🇹🇷 Türkçe</option>
+                                <option value="swedish" data-flag="🇸🇪">🇸🇪 Svenska</option>
+                                <option value="norwegian" data-flag="🇳🇴">🇳🇴 Norsk</option>
+                                <option value="danish" data-flag="🇩🇰">🇩🇰 Dansk</option>
+                                <option value="finnish" data-flag="🇫🇮">🇫🇮 Suomi</option>
+                                <option value="greek" data-flag="🇬🇷">🇬🇷 Ελληνικά</option>
+                                <option value="hebrew" data-flag="🇮🇱">🇮🇱 עברית</option>
+                                <option value="thai" data-flag="🇹🇭">🇹🇭 ไทย</option>                                                                                                                                                                                                
+                                </select>
+                            </div>
+                            <div class="profile-field">
+                                <label>Currency</label>
+                                <select class="profile-input" id="currencySelector" data-currency="true" onchange="changeCurrency(this.value)">
+                                    <option value="inr" selected>Indian Rupee (₹)</option>
+                                    <option value="usd">US Dollar ($)</option>
+                                    <option value="eur">Euro (€)</option>
+                                    <option value="gbp">British Pound (£)</option>
+                                    <option value="aud">Australian Dollar (A$)</option>
+                                    <option value="cad">Canadian Dollar (C$)</option>
+                                    <option value="jpy">Japanese Yen (¥)</option>
+                                    <option value="sgd">Singapore Dollar (S$)</option>
+                                    <option value="aed">UAE Dirham (د.إ)</option>
+                                    <option value="chf">Swiss Franc (CHF)</option>
+                                </select>
+                            </div>
+                            <div class="profile-field">
+                                <label>Email Notifications</label>
+                                <select class="profile-input">
+                                    <option value="all" selected>Disable</option>
+                                    <option value="important">Important Only</option>
+                                    <option value="none">All Notifications</option>
+                                </select>
+                            </div>
+                            <div class="profile-field">
+                                <label>SMS Notifications</label>
+                                <select class="profile-input">
+                                    <Enabledvalue="enabled" selected>Disable</option> 
+                                   <option value="important">Disable</option>
+                                    </option value="none">Enable</option>
+                                </select>
+                            </div>
+                            <button class="save-btn">
+                                <i class="fas fa-save"></i> Save Preferences
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+
+                    <div class="footer-logo">
+                    <div class="footer-logo-container">
+                        <div class="footer-logo-icon">
+                            <i class="fas fa-chart-network"></i>
+                        </div>
+                        <div class="footer-logo-text">
+                            <span class="footer-logo-main">India Social Panel</span>
+                            <span class="footer-logo-sub">Premium Social Media Services</span>
+                        </div>
+                    </div>
+                </div>
+                    <p>India Social Panel is a registered digital marketing agency specializing in Website Development, Social Media Marketing, Graphic Design, and Meta & Google Ads services. We are committed to delivering exceptional results to help your business grow online.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <div class="support-links">
+                        <div class="support-item">
+                            <i class="fas fa-ticket-alt"></i>
+                            <span>Tickets</span>
+                        </div>
+                        <div class="support-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>indiasocialpanel@email.com</span>
+                        </div>
+                        <div class="support-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+919431863716</span>
+                        </div>
+                        <div class="support-item">
+                            <i class="fab fa-instagram"></i>
+                            <span>indiasocialpanel.official</span>
+                        </div>
+                        <div class="support-item">
+                            <i class="fab fa-telegram"></i>
+                            <a href="https://t.me/Indiasocialpainel_support_bot?start=start">indiasocialpanel_support</a>
+                        </div>
+                        <div class="support-item">
+                            <i class="fas fa-language"></i>
+                            <span>Language</span>
+                            <select id="languageSelect" class="native-language-select" onchange="updateLanguage(this.value)">
+                                <option value="english" data-flag="🇺🇸">🇺🇸 English</option>
+                                <option value="hindi" data-flag="🇮🇳">🇮🇳 हिंदी (Hindi)</option>
+                                <option value="spanish" data-flag="🇪🇸">🇪🇸 Español</option>
+                                <option value="french" data-flag="🇫🇷">🇫🇷 Français</option>
+                                <option value="german" data-flag="🇩🇪">🇩🇪 Deutsch</option>
+                                <option value="italian" data-flag="🇮🇹">🇮🇹 Italiano</option>
+                                <option value="portuguese" data-flag="🇧🇷">🇧🇷 Português</option>
+                                <option value="russian" data-flag="🇷🇺">🇷🇺 Русский</option>
+                                <option value="chinese" data-flag="🇨🇳">🇨🇳 中文</option>
+                                <option value="japanese" data-flag="🇯🇵">🇯🇵 日本語</option>
+                                <option value="korean" data-flag="🇰🇷">🇰🇷 한국어</option>
+                                <option value="arabic" data-flag="🇸🇦">🇸🇦 العربية</option>
+                                <option value="dutch" data-flag="🇳🇱">🇳🇱 Nederlands</option>
+                                <option value="polish" data-flag="🇵🇱">🇵🇱 Polski</option>
+                                <option value="turkish" data-flag="🇹🇷">🇹🇷 Türkçe</option>
+                                <option value="swedish" data-flag="🇸🇪">🇸🇪 Svenska</option>
+                                <option value="norwegian" data-flag="🇳🇴">🇳🇴 Norsk</option>
+                                <option value="danish" data-flag="🇩🇰">🇩🇰 Dansk</option>
+                                <option value="finnish" data-flag="🇫🇮">🇫🇮 Suomi</option>
+                                <option value="greek" data-flag="🇬🇷">🇬🇷 Ελληνικά</option>
+                                <option value="hebrew" data-flag="🇮🇱">🇮🇱 עברית</option>
+                                <option value="thai" data-flag="🇹🇭">🇹🇭 ไทย</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 India Social Panel. All rights reserved. India Social Panel is a registered digital marketing agency offering Website Development, Social Media Marketing, Graphic Design, and Meta & Google Ads services. Instagram, Facebook, Threads, WhatsApp, and their respective logos are trademarks of Meta Platforms, Inc. Telegram and the Telegram logo are trademarks of Telegram Messenger Inc. Twitter and the Twitter logo are trademarks of Twitter, Inc. TikTok and the TikTok logo are trademarks of ByteDance Ltd. Google, YouTube, Gmail, and their respective logos are trademarks of Google LLC.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 2FA Setup Modal -->
+    <div id="twoFactorModal" class="modal" style="display: none;">
+        <div class="modal-overlay" onclick="close2FAModal()"></div>
+        <div class="modal-content-2fa">
+            <div class="modal-header">
+                <h3><i class="fas fa-shield-alt"></i> Enable Two-Factor Authentication</h3>
+                <button onclick="close2FAModal()" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="step-indicator">
+                    <div class="step active">1</div>
+                    <div class="step">2</div>
+                </div>
+
+                <div class="tfa-step step-1">
+                    <h4>📱 Enter Your Mobile Number</h4>
+                    <p>We'll send you a verification code to secure your account</p>
+
+                    <div class="phone-input-container">
+                        <div class="country-selector">
+                            <span class="flag">🇮🇳</span>
+                            <span class="code">+91</span>
+                        </div>
+                        <input type="tel" id="phoneNumber" placeholder="Enter 10 digit mobile number" maxlength="10" oninput="validatePhoneInput(this)" onkeydown="restrictPhoneInput(event)" onpaste="handlePhonePaste(event)">
+                    </div>
+                    <div id="phoneError" class="error-message" style="display: none;"></div>
+
+                    <button onclick="sendOTP()" class="verify-btn">
+                        <i class="fas fa-paper-plane"></i> Send Verification Code
+                    </button>
+                </div>
+
+                <div class="tfa-step step-2" style="display: none;">
+                    <h4>✅ Verification Code Sent!</h4>
+                    <p>Enter the 6-digit code sent to +91 <span id="maskedNumber"></span></p>
+
+                    <div class="otp-input-container">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                        <input type="text" maxlength="1" class="otp-digit">
+                    </div>
+
+                    <button onclick="verifyOTP()" class="verify-btn">
+                        <i class="fas fa-check-circle"></i> Verify & Enable 2FA
+                    </button>
+                    <button onclick="resendOTP()" class="resend-btn">
+                        <i class="fas fa-refresh"></i> Resend Code
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enhanced Floating Contact Widget -->
+    <div class="floating-contact">
+        <div class="contact-widget">
+            <div class="contact-options" id="contactOptions">
+                <button class="contact-option phone" data-tooltip="Call Support" onclick="openPhoneDialer()">
+                    <i class="fas fa-phone"></i>
+                </button>
+                <button class="contact-option whatsapp" data-tooltip="WhatsApp Support" onclick="openWhatsAppSupport()">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+                <button class="contact-option telegram" data-tooltip="Telegram Support" onclick="openTelegramSupport()">
+                    <i class="fab fa-telegram"></i>
+                </button>
+                <button class="contact-option instagram" data-tooltip="Follow Us" onclick="openInstagramPage()">
+                    <i class="fab fa-instagram"></i>
+                </button>
+                <button class="contact-option ai-support" data-tooltip="AI Assistant" onclick="openAISupport()">
+                    <i class="fas fa-robot"></i>
+                </button>
+            </div>
+            <button class="contact-main-btn" id="contactMainBtn" onclick="toggleContactOptions()">
+                <i class="fas fa-headset"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- AI Chatbot Modal -->
+    <div id="aiChatModal" class="ai-chat-modal">
+        <div class="chat-overlay" onclick="closeAIChat()"></div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <div class="ai-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="ai-info">
+                        <h3>India Social Panel AI</h3>
+                        <span class="ai-status">Online • Ready to help</span>
+                    </div>
+                </div>
+                <button onclick="closeAIChat()" class="close-chat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message ai-message">
+                    <div class="message-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content">
+                        <p>नमस्ते! 🙏 मैं India Social Panel का AI Assistant हूं। मैं आपकी SMM services, orders, payments और अन्य queries में मदद कर सकता हूं।</p>
+                        <div class="quick-questions">
+                            <h4>💡 Popular Questions:</h4>
+                            <button class="quick-btn" onclick="askQuickQuestion('How to place an order?')">🛒 Order कैसे करें?</button>
+                            <button class="quick-btn" onclick="askQuickQuestion('What payment methods do you accept?')">💳 Payment methods?</button>
+                            <button class="quick-btn" onclick="askQuickQuestion('How to check order status?')">📊 Order status कैसे check करें?</button>
+                            <button class="quick-btn" onclick="askQuickQuestion('What is API?')">🔗 API क्या है?</button>
+                            <button class="quick-btn" onclick="askQuickQuestion('Best services for Instagram growth?')">📸 Instagram growth tips?</button>
+                            <button class="quick-btn" onclick="askQuickQuestion('YouTube services available?')">🎥 YouTube services?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-container">
+                <div class="chat-input-wrapper">
+                    <input type="text" id="chatInput" placeholder="Type your question here..." onkeypress="handleChatKeyPress(event)">
+                    <button onclick="sendMessage()" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <span>AI is typing</span>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
